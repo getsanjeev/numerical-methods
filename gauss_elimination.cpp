@@ -25,8 +25,6 @@ int main()
 	}	
 	dimensions = dimensions+1;
 	
-	float coefficient_matrix [no_of_equations][dimensions];
-
 	while(p==1)	
 	{
 		cout<<"Enter the no of equations"<<endl;
@@ -41,8 +39,7 @@ int main()
 		}
 	}	
 
-
-
+	float coefficient_matrix [no_of_equations][dimensions];
 
 	for (int i = 0;i<no_of_equations;i++)
 	{
@@ -70,15 +67,15 @@ int main()
 		cout<<endl<<endl;
 	}
 
-/*	for (int i = 0;i<no_of_equations;i++ )
+	/*for (int i = 0;i<no_of_equations;i++ )
 	{
 		for(int j =0;j<dimensions;j++)
 		{
 			cout<<coefficient_matrix[i][j]<<" ";
 		}
 		cout<<endl;
-	}	
-*/
+	}*/	
+
 	float initial_max;
 	int index;
 
@@ -107,7 +104,7 @@ int main()
 			coefficient_matrix[index][lc] = temp;
 		}		
 
-		for (int m = 0;m<no_of_equations;m++ )
+/*		for (int m = 0;m<no_of_equations;m++ )
 		{
 			for(int n =0;n<dimensions;n++)
 			{
@@ -115,7 +112,7 @@ int main()
 			}
 			cout<<endl;
 		}
-
+*/
 		//Making the elements below the pivot equal to zero
 		for(int cc = i+1;cc<no_of_equations;cc++)
 		{
@@ -166,11 +163,11 @@ int main()
 		}
 		solution[jj] = (coefficient_matrix[jj][dimensions-1] - current_sum)/coefficient_matrix[jj][jj];		
 
-		/*for(int zz = 0;zz<dimensions-1;zz++)
+/*		for(int zz = 0;zz<dimensions-1;zz++)
 		{
 			cout<<solution[zz]<<" ";
-		}*/				
-		cout<<endl<<endl;
+		}				
+*/		cout<<endl<<endl;
 	}
 
 	cout<<"The solution is given by:"<<endl;
